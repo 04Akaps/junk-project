@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="/스크롤에 따른 이미지 이동//images/stars.png" id="stars">
+            <img src="/스크롤에 따른 이미지 이동//images/moon.png" id="moon">
+            <img src="/스크롤에 따른 이미지 이동//images/mountains_behind.png" id="behind">
+            <h2 class="text"> Moon Light</h2>
+            <a href="https://www.naver.com/" class="btn">Go To Naver</a>
+            <img src="/스크롤에 따른 이미지 이동//images/mountains_front.png" id="front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>연습용으로 천천히 시간있을떄 하나씩 만들어 보는 css 연습!!!</h2>
+            <p>Test용~~~~~</p>
+            <p>단지 칸을 내리기 위해서 존재하는 글 입니다.</p>
+   
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+        </div>
+
+        <script>
+            let stars = document.querySelector('#stars')
+            let moon = document.querySelector('#moon')
+            let front = document.querySelector('#front')
+            let behing = document.querySelector('#behind')
+
+            window.addEventListener('scroll', ()=>{
+                let val = window.scrollY;
+                stars.style.left = val + 'px'
+                moon.style.top = val + 'px'
+                behind.style.top = val + 'px'
+                front.style.top = val + 'px'
+            })
+        </script>
+    </body>
+</html>
